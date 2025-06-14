@@ -4,6 +4,7 @@ import Cart from "../src/Pages/Cart";
 import SearchPage from "../src/Pages/SearchPage";
 
 import {Route, Routes} from 'react-router-dom';
+import Test from "./Pages/Test";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path='search' element={<SearchPage />} />
         <Route exact path='product' element={<Product />} />
         <Route exact path='cart' element={<Cart />} />
+        <Route exact path='axios' element={<Test />} />
       </Routes>
     </>
   );
