@@ -47,9 +47,11 @@ function FilterShop() {
             </div>
            
             <div className="product-list container">
-                {products.map((item, key) => 
-                    <p key={key}>{item.title}</p>
-                )}
+                {products.length > 0 ? 
+                    products.map((item, key) => 
+                        <p key={key}>{item.title}</p>
+                    ) : <h2>No product found</h2>
+                }
             </div>
         </section>
     )
