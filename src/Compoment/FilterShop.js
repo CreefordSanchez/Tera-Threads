@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { GetProductsByCategory } from '../Service/FakeStoreService.js';
+import ProductBox from "./ProductBox.js";
 
 function FilterShop() {
     const [products, setProducts] = useState([]);
@@ -11,6 +12,7 @@ function FilterShop() {
     useEffect(() => {
         const displayProducts = async () => {
             const list = await GetProductsByCategory(category);
+            console.log(list);
             const filteredName = productName == '' ? list :
             list.filter(item =>
                 item.title.toLowerCase().includes(productName.toLowerCase())
@@ -49,7 +51,7 @@ function FilterShop() {
             <div className="product-list container">
                 {products.length > 0 ? 
                     products.map((item, key) => 
-                        <p key={key}>{item.title}</p>
+                        <ProductBox key={key} Title={item.title} Image={item.image} Price={item.price}/>
                     ) : <h2>No product found</h2>
                 }
             </div>

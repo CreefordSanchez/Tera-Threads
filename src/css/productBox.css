@@ -1,0 +1,15 @@
+.product-box {
+    border: 2px solid var(--app-brown);
+}
+
+.product-img-box {
+    height: 335px;
+}
+
+.product-img-box img {
+    width: 200px;
+}
+
+.product-detail {
+    padding: 10px;
+}
