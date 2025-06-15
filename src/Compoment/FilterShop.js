@@ -13,7 +13,7 @@ function FilterShop() {
         const displayProducts = async () => {
             const list = await GetProductsByCategory(category);
             console.log(list);
-            const filteredName = productName == '' ? list :
+            const filteredName = productName === '' ? list :
             list.filter(item =>
                 item.title.toLowerCase().includes(productName.toLowerCase())
             );            
@@ -21,7 +21,7 @@ function FilterShop() {
             setProducts(filteredName);
         };
 
-        if (products.length == 0 || !(prevCategory.current == category && prevName.current == productName)) {
+        if (products.length === 0 || !(prevCategory.current === category && prevName.current === productName)) {
             displayProducts();
         }
 
@@ -51,7 +51,14 @@ function FilterShop() {
             <div className="product-list container">
                 {products.length > 0 ? 
                     products.map((item, key) => 
-                        <ProductBox key={key} Title={item.title} Image={item.image} Price={item.price}/>
+                        <ProductBox
+                            key={item.id}
+                            id={item.id}
+                            image={item.image}
+                            title={item.title}
+                            price={`$${item.price}`}
+                            clickable={true}
+                        />
                     ) : <h2>No product found</h2>
                 }
             </div>

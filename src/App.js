@@ -10,9 +10,10 @@ function App() {
     <>
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route exact path='product' element={<Product />} />
+        {/* <Route exact path='product' element={<Product />} /> */}
         <Route exact path='cart' element={<Cart />} />
         <Route exact path='axios' element={<Test />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
     </>
   );
