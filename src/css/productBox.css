@@ -16,3 +16,33 @@
     padding: 10px;
 }
 
+.product-detail-page {
+    padding: 2rem;
+}
+
+.product-main-detail {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-image {
+    width: 300px;
+    object-fit: contain;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.suggested-products {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+    text-decoration: none;
+}
+
+.star-icon {
+  color: gold;
+}

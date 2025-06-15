@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 function ProductBox(props) {
     const content = (
         <div className="product-box">
-        <div className="product-img-box flex-center">
-            <img src={props.image} alt={props.title} />
-        </div>
-        <div className="product-detail">
-            <p>{props.title}</p>
-            <p>{props.price}</p>
-        </div>
+            <div className="product-img-box flex-center">
+                <img src={props.image} alt={props.title} />
+            </div>
+            <div className="product-detail">
+                <p>{props.title}</p>
+                <p>{props.price}</p>
+            </div>
         </div>
     );
 
