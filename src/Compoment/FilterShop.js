@@ -28,23 +28,30 @@ function FilterShop() {
     }, [category, productName]);
 
     return (
-        <div>
-            <select onChange={(event) => setCategory(event.target.value)}>
-                <option>Select a Category</option>
-                <option value={"women's clothing"}>Woman's Clothing</option>
-                <option value={"men's clothing"}>Man's Clothing</option>
-                <option value={"jewelery"}>Jewery's</option>
-                <option value={"electronics"}>Electronic's</option>
-            </select>
-            <input onChange={(event) => setProductName(event.target.value)}></input>
-
-            <div className="product-list">
-                <h1>{category}</h1>
+        <section>
+            <div className="sort-product-header border-bottom">
+                <form className="container">
+                    <div className="filter-search-bar flex border-rad-5">
+                        <input onChange={(event) => setProductName(event.target.value)} placeholder="Product Name"></input>
+                        <div className="filter-dropdown flex-center">
+                            <select onChange={(event) => setCategory(event.target.value)}>
+                                <option>Select a Category</option>
+                                <option value={"women's clothing"}>Woman's Clothing</option>
+                                <option value={"men's clothing"}>Man's Clothing</option>
+                                <option value={"jewelery"}>Jewery's</option>
+                                <option value={"electronics"}>Electronic's</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>                
+            </div>
+           
+            <div className="product-list container">
                 {products.map((item, key) => 
                     <p key={key}>{item.title}</p>
                 )}
             </div>
-        </div>
+        </section>
     )
 }
 

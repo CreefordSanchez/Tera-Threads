@@ -1,7 +1,6 @@
 import Home from "../src/Pages/Home";
 import Product from "../src/Pages/Product";
 import Cart from "../src/Pages/Cart";
-import SearchPage from "../src/Pages/SearchPage";
 import './css/index.css';
 import {Route, Routes} from 'react-router-dom';
 import Test from "./Pages/Test";

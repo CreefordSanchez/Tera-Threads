@@ -1,0 +1,33 @@
+:root {
+    --app-black: #000;
+    --app-white: #fff;
+    --app-no-color: #00000000;
+}
+
+.container {
+    width: min(100% - 20px, 1400px);
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.border-rad-5 {
+    border-radius: 5px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--app-black);
+}
