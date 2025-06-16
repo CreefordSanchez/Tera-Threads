@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ProductBox from "../Compoment/ProductBox";
 import { FaStar } from 'react-icons/fa';
 import { GetProductById, GetProductsByCategory } from '../Service/FakeStoreService';
+import { Link } from "react-router-dom";
 
 function Product() {
     const { id } = useParams();
@@ -46,6 +47,7 @@ function Product() {
                 <p><strong>Description:</strong> {product.description}</p>
                 <p><strong>Category:</strong> {product.category}</p>
                 <p><strong>Rating:</strong> {product.rating?.rate} <FaStar className="star-icon" /> ({product.rating?.count} reviews)</p>
+                <Link to='./cart'><button>Add to Cart</button></Link>
                 </div>
             </div>
 

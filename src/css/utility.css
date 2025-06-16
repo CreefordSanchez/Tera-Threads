@@ -3,6 +3,13 @@
     --app-white: #fff;
     --app-brown: #f8e2c6;
     --app-no-color: #00000000;
+    /*my product page color*/
+    --app-brown: #A77B4D;
+    --light-background: #ffffff;
+    --light-gray: #f7f7f7;
+    --text-dark: #333;
+    --text-light: #777;
+    --highlight: #FFD700;
 }
 
 .container {
