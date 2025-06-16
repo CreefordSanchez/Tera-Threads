@@ -1,31 +1,27 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import ProductBox from "../Compoment/ProductBox";
 import { FaStar } from 'react-icons/fa';
-import Error404 from "./Error404";
-import { GetProductById } from "../Service/FakeStoreService";
 
 function Product() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [suggestions, setSuggestions] = useState([]);
-    let navigate = useNavigate();
 
     // Fetch the main product
     useEffect(() => {
         const fetchProduct = async () => {
-            const promise = await GetProductById(id);
-            if (promise != '') {
-                setProduct(promise);
-            } else {
-                navigate('*');
+            try {
+                const res = await axios.get(`https://fakestoreapi.com/products/${id}`);
+                setProduct(res.data);
+            } catch (err) {
+                console.error("Error fetching product:", err);
             }
         };
 
         fetchProduct();
     }, [id]);
-
 
     // Once the product is fetched, fetch related products
     useEffect(() => {
