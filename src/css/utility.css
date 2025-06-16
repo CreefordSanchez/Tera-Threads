@@ -2,8 +2,15 @@
     --app-black: #000;
     --app-white: #fff;
     --app-brown: #f8e2c6;
+    --app-gray: #e0e0e0;
     --app-no-color: #00000000;
-    --app-font-color:	#fff;
+    /*my product page color*/
+    --app-brown: #A77B4D;
+    --light-background: #ffffff;
+    --light-gray: #f7f7f7;
+    --text-dark: #333;
+    --text-light: #777;
+    --highlight: #FFD700;
 }
 
 .container {
@@ -35,6 +42,10 @@
     border-radius: 5px;
 }
 
-.border-bottom {
+.border-bottom-black {
     border-bottom: 1px solid var(--app-black);
+}
+
+.border-bottom-gray {
+    border-bottom: 1px solid var(--app-gray);
 }
