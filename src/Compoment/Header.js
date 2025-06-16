@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
     return (
@@ -7,8 +7,16 @@ function Header() {
                 <h1>Terra Threads</h1>
                 <nav>
                     <ul>
-                        <Link to='/'>Home</Link>
-                         <Link to='/cart'>Cart</Link>
+                        <li>
+                            <NavLink to='/' className={navData => (navData.isActive ? 'active' : '')}>
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/cart' className={navData => (navData.isActive ? 'active' : '')}>
+                                Cart
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>
