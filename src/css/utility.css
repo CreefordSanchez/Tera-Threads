@@ -1,5 +1,5 @@
 :root {
-    --app-black: #000;
+    --app-black: #141414;
     --app-white: #fff;
     --app-gray: #e0e0e0;
     --app-no-color: #00000000;
@@ -52,4 +52,8 @@
 
 .border-bottom-gray {
     border-bottom: 1px solid var(--app-gray);
+}
+
+.section-break {
+    padding: 60px 0;
 }

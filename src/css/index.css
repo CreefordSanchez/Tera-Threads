@@ -2,6 +2,7 @@
 @import url('./filter-shop.css');
 @import url('./productBox.css');
 @import url('./header.css');
+@import url('./footer.css');
 
 * {
     margin: 0;
@@ -20,6 +21,10 @@ button {
 .active {
     border-bottom: 2px solid #f90;
     font-weight: 600;
+}
+
+a {
+    cursor: pointer;
 }
 
 a {
@@ -90,7 +95,7 @@ a {
 .second-hero-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #1E1E2F;
+    background-color: #b1b1fc;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
