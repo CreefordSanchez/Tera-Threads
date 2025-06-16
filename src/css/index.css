@@ -12,3 +12,7 @@
 button { 
     cursor: pointer;
 }
+
+.error-404 {
+    height: calc(100vh - 70.8px);
+}
