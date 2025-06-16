@@ -4,6 +4,14 @@ header .container {
 
 header ul {
     display: flex;
-    gap: 10px;
+    gap: 20px; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+header ul li a {
     font-size: 20px;
+    color: #000;
+    text-decoration: none;
 }

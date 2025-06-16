@@ -110,3 +110,7 @@
     width: 80%;
   }
 }
+
+.link-wrapper {
+    color: var(--app-white);
+}

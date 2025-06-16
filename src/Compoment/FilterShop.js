@@ -12,7 +12,6 @@ function FilterShop() {
     useEffect(() => {
         const displayProducts = async () => {
             const list = await GetProductsByCategory(category);
-            console.log(list);
             const filteredName = productName === '' ? list :
             list.filter(item =>
                 item.title.toLowerCase().includes(productName.toLowerCase())
@@ -31,11 +30,11 @@ function FilterShop() {
 
     return (
         <section>
-            <div className="sort-product-header border-bottom">
+            <div className="sort-product-header border-bottom-gray">
                 <form className="container">
-                    <div className="filter-search-bar flex border-rad-5">
+                    <div className="flex-center flex-space-between">
                         <input onChange={(event) => setProductName(event.target.value)} placeholder="Product Name"></input>
-                        <div className="filter-dropdown flex-center">
+                        <div className="filter-dropdown flex-align-center">
                             <select onChange={(event) => setCategory(event.target.value)}>
                                 <option>Select a Category</option>
                                 <option value={"women's clothing"}>Woman's Clothing</option>
@@ -43,7 +42,8 @@ function FilterShop() {
                                 <option value={"jewelery"}>Jewery's</option>
                                 <option value={"electronics"}>Electronic's</option>
                             </select>
-                        </div>
+                            <i className="fa-solid fa-angle-down"></i>
+                        </div>                        
                     </div>
                 </form>                
             </div>

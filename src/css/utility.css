@@ -2,6 +2,7 @@
     --app-black: #000;
     --app-white: #fff;
     --app-brown: #f8e2c6;
+    --app-gray: #e0e0e0;
     --app-no-color: #00000000;
     /*my product page color*/
     --app-brown: #A77B4D;
@@ -41,6 +42,10 @@
     border-radius: 5px;
 }
 
-.border-bottom {
+.border-bottom-black {
     border-bottom: 1px solid var(--app-black);
+}
+
+.border-bottom-gray {
+    border-bottom: 1px solid var(--app-gray);
 }

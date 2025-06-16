@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function ProductBox(props) {
     const content = (
-        <div className="product-box">
+        <div className="product-box border-rad-5">
             <div className="product-img-box flex-center">
                 <img src={props.image} alt={props.title} />
             </div>
