@@ -66,38 +66,40 @@ a {
     margin-bottom: 35px;
     text-align: center;
     padding: 0px 100px;
-    max-width: 1500px;
+    max-width: 1200px;
 }
   
 .first-hero-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--app-button-color);
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
-  
-.first-hero-button:hover {
-    background-color: #e59200;
-    color: var(--app-font-color);
-}
-
-.second-hero-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #fff;
+    background-color: var(--app-brown); 
     color: #000;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 500;
     transition: background 0.3s ease;
 }
-  
+
 .first-hero-button:hover {
-    background-color: #e59200;
-    color: var(--app-font-color);
+    background-color: #bb946c;
+    transform: scale(1.05);
+}
+
+.second-hero-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1E1E2F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.second-hero-button:hover {
+    background-color: #34344A; 
+    color: #fff;
+    transform: scale(1.05);
 }
 
 .banner-btn {
