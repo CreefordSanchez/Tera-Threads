@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 function Header() {
     return (
-        <header className="border-bottom">
+        <header className="border-bottom-black">
             <div className="container flex-space-between flex-align-center">
                 <h1>Terra Threads</h1>
                 <nav>

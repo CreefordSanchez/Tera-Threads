@@ -2,23 +2,18 @@
     padding: 10px 0;
 }
 
-.filter-search-bar {
-    border: 1px solid var(--app-black);  
-    width: inherit;
-    overflow: hidden;
-    width: 346px;
-}
-
 .sort-product-header input {
-    border: none;
-    background-color: #00000000;
+    background-color: var(--app-no-color);
     padding: 10px 0 10px 10px;
     width: 200px;
+    margin-left: 5px;
+    border: 1px solid var(--app-gray);
+    border-radius: 5px;
 }
 
 .filter-dropdown {
     cursor: pointer;
-    background-color: #ff0000;
+    position: relative;
 }
 
 .filter-dropdown select {
@@ -28,26 +23,22 @@
   -moz-appearance: none;
   width: 110px;
   cursor: pointer;
-  background-color: #00000000;
-  color: var(--app-white);
+  background-color: var(--app-no-color);
   height: 36px;
   width: 146px;
   text-align: center;
 }
 
-.filter-dropdown select option {
-    color: var(--app-black);
+.filter-dropdown i {
+    position: absolute;
+    right: 0;
+    z-index: -1;
 }
 
-
+/*Display List*/
 .product-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 10px;
     gap: 10px;
-}
-
-.product-list p:nth-of-type(2) {
-    padding-top: 10px;
-    color: red;
 }
