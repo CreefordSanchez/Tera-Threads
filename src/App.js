@@ -6,10 +6,11 @@ import {Route, Routes} from 'react-router-dom';
 import Test from "./Pages/Test";
 import Header from "./Compoment/Header";
 import Error404 from "./Pages/Error404";
+import Footer from "./Compoment/Footer";
 
 function App() {
   return (
-    <>
+    <main>
       <Header />
       <Routes>
         <Route exact path='/' element={<Home />} />
@@ -18,7 +19,8 @@ function App() {
         <Route exact path='axios' element={<Test />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
-    </>
+      <Footer />
+    </main>
   );
 }
 
