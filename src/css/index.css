@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 button { 
     cursor: pointer;
 }
@@ -101,4 +105,7 @@ a {
     justify-content: center;
     text-align: center;
     gap: 20px;
+}
+.error-404 {
+    height: calc(100vh - 70.8px);
 }

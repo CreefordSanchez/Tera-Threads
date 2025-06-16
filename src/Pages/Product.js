@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import ProductBox from "../Compoment/ProductBox";
 import { FaStar } from 'react-icons/fa';
+import { GetProductById, GetProductsByCategory } from '../Service/FakeStoreService';
 
 function Product() {
     const { id } = useParams();
@@ -12,31 +12,23 @@ function Product() {
     // Fetch the main product
     useEffect(() => {
         const fetchProduct = async () => {
-            try {
-                const res = await axios.get(`https://fakestoreapi.com/products/${id}`);
-                setProduct(res.data);
-            } catch (err) {
-                console.error("Error fetching product:", err);
-            }
+            const data = await GetProductById(id);
+            if (data) setProduct(data);
         };
-
         fetchProduct();
     }, [id]);
 
-    // Once the product is fetched, fetch related products
+    // Fetch the related Product
     useEffect(() => {
         const fetchSuggestions = async () => {
-        if (product?.category) {
-            try {
-                const res = await axios.get(`https://fakestoreapi.com/products/category/${product.category}`);
-                const related = res.data.filter(p => p.id !== product.id).slice(0, 3);
-                setSuggestions(related);
-            } catch (err) {
-                console.error("Error fetching similar products:", err);
+            if (product?.category) {
+                const data = await GetProductsByCategory(product.category);
+                if (data) {
+                    const related = data.filter(p => p.id !== product.id).slice(0, 3);
+                    setSuggestions(related);
+                }
             }
-        }
         };
-
         fetchSuggestions();
     }, [product]);
 
