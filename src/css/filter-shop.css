@@ -41,4 +41,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 10px;
     gap: 10px;
+    height: 750px;
+    overflow: scroll;
 }

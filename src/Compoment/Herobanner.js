@@ -11,12 +11,12 @@ function Herobanner() {
                 </p>
                 <div className="flex banner-btn">
                     <div className="">
-                        <a href="#services" class="first-hero-button">
+                        <a href="#services" className="first-hero-button">
                             Explore Womenswear
                         </a>
                     </div>
                     <div className="">
-                        <a href="#services" class="second-hero-button">
+                        <a href="#services" className="second-hero-button">
                             Explore Menswear
                         </a>
                     </div>
