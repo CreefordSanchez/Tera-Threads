@@ -3,6 +3,9 @@
     --app-white: #fff;
     --app-brown: #f8e2c6;
     --app-no-color: #00000000;
+    --app-font-color:	#fff;
+    --app-hover-cover: 	#E85D00;
+    --app-button-color: #FF6B00;
 }
 
 .container {
