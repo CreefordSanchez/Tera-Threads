@@ -1,7 +1,6 @@
 :root {
     --app-black: #000;
     --app-white: #fff;
-    --app-brown: #f8e2c6;
     --app-gray: #e0e0e0;
     --app-no-color: #00000000;
     /*my product page color*/
@@ -11,6 +10,11 @@
     --text-dark: #333;
     --text-light: #777;
     --highlight: #FFD700;
+}
+
+.logo {
+     font-family: "Berkshire Swash", serif;
+     color: var(--app-brown);
 }
 
 .container {
