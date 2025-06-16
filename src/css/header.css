@@ -1,3 +1,15 @@
+main {
+    padding-top: 70.8px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--app-white);
+    z-index: 10;
+}
+
 header .container {
     height: 70px;
 }

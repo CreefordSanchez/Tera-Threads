@@ -9,7 +9,7 @@ import Error404 from "./Pages/Error404";
 
 function App() {
   return (
-    <>
+    <main>
       <Header />
       <Routes>
         <Route exact path='/' element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
         <Route exact path='axios' element={<Test />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
-    </>
+    </main>
   );
 }
 
