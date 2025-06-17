@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Tera-Threads/static/css/main.cd595c8e.css",
-    "main.js": "/Tera-Threads/static/js/main.c8a42eec.js",
+    "main.js": "/Tera-Threads/static/js/main.1e6717df.js",
     "static/media/bannerimg.jpg": "/Tera-Threads/static/media/bannerimg.95a03ab64b0dafb9abd0.jpg",
     "index.html": "/Tera-Threads/index.html",
     "main.cd595c8e.css.map": "/Tera-Threads/static/css/main.cd595c8e.css.map",
-    "main.c8a42eec.js.map": "/Tera-Threads/static/js/main.c8a42eec.js.map"
+    "main.1e6717df.js.map": "/Tera-Threads/static/js/main.1e6717df.js.map"
   },
   "entrypoints": [
     "static/css/main.cd595c8e.css",
-    "static/js/main.c8a42eec.js"
+    "static/js/main.1e6717df.js"
   ]
 }
