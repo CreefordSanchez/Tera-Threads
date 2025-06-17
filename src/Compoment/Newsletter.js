@@ -13,25 +13,27 @@ function Newsletter() {
     };
 
     return (
-        <section className="news-letter">
-            {!submitted ? (
-                <>
-                    <p>Join our community and get 10% off your first order</p>
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="email"
-                            placeholder="Your email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </>
-            ) : (
-                <p>🎉 Thanks for signing up!</p>
-            )}
-        </section>
+        <div className='one news-letter-area'>
+            <section className="news-letter">
+                {!submitted ? (
+                    <>
+                        <p>Join our community and get 10% off your first order</p>
+                        <form onSubmit={handleSubmit}>
+                            <input
+                                type="email"
+                                placeholder="Your email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </>
+                ) : (
+                    <p>🎉 Thanks for signing up!</p>
+                )}
+            </section>
+        </div>
     );
 }
 

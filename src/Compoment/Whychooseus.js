@@ -1,6 +1,6 @@
 function Whychooseus() {
     return(
-        <section className="why-choose-us">
+        <section className="why-choose-us two">
             <h2>Why Shop with Terra Threads?</h2>
             <div className="features-grid">
                 <div className="feature-card">

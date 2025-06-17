@@ -29,7 +29,7 @@ function FilterShop() {
     }, [category, productName]);
 
     return (
-        <section>
+        <section className="one">
             <div className="sort-product-header border-bottom-gray">
                 <form className="container">
                     <div className="flex-center flex-space-between">
