@@ -223,7 +223,13 @@ a {
 .review-form-area {
     background-color: #fdf9f6;
     padding: 30px 20px;
+}
 
+.review-form-area h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
 }
 
 .review-form {
