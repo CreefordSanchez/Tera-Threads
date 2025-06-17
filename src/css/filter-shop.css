@@ -42,5 +42,6 @@
     padding-top: 10px;
     gap: 10px;
     height: 750px;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
