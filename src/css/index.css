@@ -219,3 +219,8 @@ a {
 .error-404 {
     height: calc(100vh - 70.8px);
 }
+
+.error-404 h1 {
+    font-size: 75px;
+    font-weight: 400;
+}
