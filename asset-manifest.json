@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Tera-Threads/static/css/main.cd595c8e.css",
+    "main.js": "/Tera-Threads/static/js/main.f9ba46c1.js",
+    "static/media/bannerimg.jpg": "/Tera-Threads/static/media/bannerimg.95a03ab64b0dafb9abd0.jpg",
+    "index.html": "/Tera-Threads/index.html",
+    "main.cd595c8e.css.map": "/Tera-Threads/static/css/main.cd595c8e.css.map",
+    "main.f9ba46c1.js.map": "/Tera-Threads/static/js/main.f9ba46c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd595c8e.css",
+    "static/js/main.f9ba46c1.js"
+  ]
+}
