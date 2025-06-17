@@ -32,7 +32,7 @@ a {
 }
 
 
-/******************************************************************************/
+/***************************   Hero Banner  ***********************************/
 .hero {
     background: url('../img/bannerimg.jpg') center/cover no-repeat;
     color: #fff;
@@ -114,7 +114,7 @@ a {
     text-align: center;
     gap: 20px;
 }
-/******************************************************************************/
+/*************************    Why choose us   *********************************/
 
 .why-choose-us {
   padding: 60px 20px;
@@ -140,7 +140,7 @@ a {
   background: #fff;
   border-radius: 16px;
   padding: 30px 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -165,10 +165,11 @@ a {
   font-size: 0.95rem;
   line-height: 1.5;
 }
-/******************************************************************************/
+
+/*************************   Sliding Reviews   *********************************/
 .review-slider {
-  padding: 40px 20px;
-  background: #f9f5f2;
+  padding: 60px 20px;
+  background: #fdf9f6;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -212,10 +213,23 @@ a {
   color: #FFD700;
 }
 
-/******************************************************************************/
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/***************************   Review Form   **********************************/
 
 .review-form-area {
     background-color: #fdf9f6;
+    padding: 30px 20px;
+}
+
+.review-form-area h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
 }
 
 .review-form {
@@ -245,15 +259,14 @@ a {
   cursor: pointer;
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/**********************   News Letter Section   *******************************/
+.news-letter-area {
+    padding: 30px 20px;
 }
 
-/******************************************************************************/
 .news-letter {
     background-color: #fdf9f6;
-    padding: 40px 20px;
+    padding: 60px 20px;
     border-radius: 20px;
     text-align: center;
     max-width: 600px;
@@ -307,4 +320,12 @@ a {
 .error-404 h1 {
     font-size: 75px;
     font-weight: 400;
+}
+
+.one {
+    background-color: #fdf9f6;
+}
+
+.two {
+    background-color: #f9eee6;
 }

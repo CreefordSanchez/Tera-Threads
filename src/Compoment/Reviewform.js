@@ -18,9 +18,9 @@ function Reviewform({ onSubmit }) {
   };
 
   return (
-    <section className='review-form-area'>
-        <form className="review-form" onSubmit={handleSubmit}>
+    <section className='review-form-area two'>
         <h3>Leave a Review</h3>
+        <form className="review-form" onSubmit={handleSubmit}>
         <input
             type="text"
             placeholder="Your Name"
