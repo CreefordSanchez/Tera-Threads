@@ -95,6 +95,18 @@
   font-weight: 600;
 }
 
+.suggested-products .product-box {
+  width: 290px;
+}
+
+.suggested-products .product-detail {
+  padding-top: 15px;
+}
+
+.product-box p:nth-of-type(1) {
+  height: 40px;
+}
+
 @media (max-width: 768px) {
   .product-main-detail {
     flex-direction: column;

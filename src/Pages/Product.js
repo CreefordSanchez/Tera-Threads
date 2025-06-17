@@ -38,7 +38,7 @@ function Product() {
     }
 
     return (
-        <div className="product-detail-page container">
+        <div className="product-detail-page container section-break">
             <h1>{product.title}</h1>
             <div className="product-main-detail" >
                 <img src={product.image} alt={product.title} />

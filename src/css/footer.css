@@ -15,10 +15,16 @@ footer .container {
     font-size: 14px;
 }
 
+.footer-links a {
+    color: var(--app-white);
+}
+
 .nav-collumn h2 {
     color: var(--app-white);
     font-weight: 400;
 }
+
+
 
 .copyright {
     color: var(--app-white);
