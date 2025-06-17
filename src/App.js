@@ -1,4 +1,5 @@
 import './css/index.css';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../src/Pages/Home';
 import Product from '../src/Pages/Product';
@@ -43,6 +44,7 @@ function App() {
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
+    </main>
   );
 }
 
