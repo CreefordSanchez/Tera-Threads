@@ -2,6 +2,7 @@
 @import url('./filter-shop.css');
 @import url('./productBox.css');
 @import url('./header.css');
+@import url('./footer.css');
 
 * {
     margin: 0;
@@ -23,8 +24,11 @@ button {
 }
 
 a {
+    cursor: pointer;
+}
+
+a {
     text-decoration: none;
-    color: #fff;
 }
 
 
@@ -90,7 +94,7 @@ a {
 .second-hero-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #1E1E2F;
+    background-color: #b1b1fc;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
@@ -298,4 +302,9 @@ a {
 /******************************************************************************/
 .error-404 {
     height: calc(100vh - 70.8px);
+}
+
+.error-404 h1 {
+    font-size: 75px;
+    font-weight: 400;
 }

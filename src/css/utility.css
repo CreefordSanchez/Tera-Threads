@@ -1,9 +1,9 @@
 :root {
-    --app-black: #000;
+    --app-black: #141414;
     --app-white: #fff;
-    --app-brown: #f8e2c6;
     --app-gray: #e0e0e0;
     --app-no-color: #00000000;
+    --app-light-gray: #565656;
     /*my product page color*/
     --app-brown: #A77B4D;
     --light-background: #ffffff;
@@ -11,6 +11,11 @@
     --text-dark: #333;
     --text-light: #777;
     --highlight: #FFD700;
+}
+
+.logo {
+     font-family: "Berkshire Swash", serif;
+     color: var(--app-brown);
 }
 
 .container {
@@ -48,4 +53,8 @@
 
 .border-bottom-gray {
     border-bottom: 1px solid var(--app-gray);
+}
+
+.section-break {
+    padding: 60px 0;
 }

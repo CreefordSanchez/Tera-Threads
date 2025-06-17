@@ -1,7 +1,7 @@
 function Herobanner() {
     return(
-        <section class="hero ">
-            <div class="hero-content">
+        <section className="hero ">
+            <div className="hero-content">
                 <h2>Define Your Look. Own Your Moment.</h2>
                 <p>
                     Discover bold, timeless fashion that speaks for you. 
@@ -11,12 +11,12 @@ function Herobanner() {
                 </p>
                 <div className="flex banner-btn">
                     <div className="">
-                        <a href="#services" class="first-hero-button">
+                        <a href="#services" className="first-hero-button">
                             Explore Womenswear
                         </a>
                     </div>
                     <div className="">
-                        <a href="#services" class="second-hero-button">
+                        <a href="#services" className="second-hero-button">
                             Explore Menswear
                         </a>
                     </div>

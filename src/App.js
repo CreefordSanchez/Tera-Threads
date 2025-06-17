@@ -1,14 +1,12 @@
 import './css/index.css';
 import { Route, Routes } from 'react-router-dom';
-
 import Home from '../src/Pages/Home';
 import Product from '../src/Pages/Product';
 import Cart from '../src/Pages/Cart';
 import Test from '../src/Pages/Test';
 import Header from './Compoment/Header';
 import Error404 from './Pages/Error404';
-
-import { useState } from 'react';
+import Footer from "./Compoment/Footer";
 
 function App() {
   const [reviews, setReviews] = useState([
@@ -29,7 +27,7 @@ function App() {
   };
 
   return (
-    <>
+    <main>
       <Header />
       <Routes>
         <Route 
@@ -39,12 +37,12 @@ function App() {
             <Home reviews={reviews} addReview={addReview} />
           } 
         />
-        <Route exact path="cart" element={<Cart />} />
+        <Route exact path='cart' element={<Cart />} />
         <Route path="/product/:id" element={<Product />} />
         <Route exact path="axios" element={<Test />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
-    </>
+      <Footer />
   );
 }
 
