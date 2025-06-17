@@ -14,6 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path='/' element={<Home />} />
+        <Route exact path='Tera-Threads' element={<Home />} />
         <Route exact path='cart' element={<Cart />} />
         <Route path="/product/:id" element={<Product />} />
         <Route exact path='axios' element={<Test />} />
