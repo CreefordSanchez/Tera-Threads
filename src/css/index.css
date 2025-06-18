@@ -3,6 +3,7 @@
 @import url('./productBox.css');
 @import url('./header.css');
 @import url('./cart.css');
+@import url('./footer.css');
 
 * {
     margin: 0;
@@ -24,12 +25,15 @@ button {
 }
 
 a {
+    cursor: pointer;
+}
+
+a {
     text-decoration: none;
-    color: #fff;
 }
 
 
-/******************************************************************************/
+/***************************   Hero Banner  ***********************************/
 .hero {
     background: url('../img/bannerimg.jpg') center/cover no-repeat;
     color: #fff;
@@ -91,7 +95,7 @@ a {
 .second-hero-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #1E1E2F;
+    background-color: #b1b1fc;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
@@ -111,7 +115,7 @@ a {
     text-align: center;
     gap: 20px;
 }
-/******************************************************************************/
+/*************************    Why choose us   *********************************/
 
 .why-choose-us {
   padding: 60px 20px;
@@ -137,7 +141,7 @@ a {
   background: #fff;
   border-radius: 16px;
   padding: 30px 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -163,15 +167,114 @@ a {
   line-height: 1.5;
 }
 
-/******************************************************************************/
+/*************************   Sliding Reviews   *********************************/
+.review-slider {
+  padding: 60px 20px;
+  background: #fdf9f6;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.review-slider h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.review-card {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.05);
+}
+
+.review-card .stars {
+  margin-bottom: 10px;
+}
+
+.star {
+  color: #ccc;
+  text-decoration: none;   
+  border: none;              
+  background: none;         
+  outline: none;            
+  cursor: pointer;
+  font-size: 24px;         
+}
+
+.star.active {
+  color: #FFD700;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/***************************   Review Form   **********************************/
+
+.review-form-area {
+    background-color: #fdf9f6;
+    padding: 30px 20px;
+}
+
+.review-form-area h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
+}
+
+.review-form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgb(0 0 0 /0.05);
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.review-form button {
+  padding: 12px 24px;
+  background: #a77b4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/**********************   News Letter Section   *******************************/
+.news-letter-area {
+    padding: 30px 20px;
+}
+
 .news-letter {
-    background-color: #f9f5f2;
-    padding: 40px 20px;
+    background-color: #f9eee6;
+    padding: 60px 20px;
     border-radius: 20px;
     text-align: center;
     max-width: 600px;
     margin: 60px auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 0.05);
 }
 
 .news-letter p {
@@ -212,7 +315,59 @@ a {
     background-color: #8b623a;
 }
 
+/**************************   Insta Feed   ************************************/
+
+.instagram-feed {
+    padding: 60px 20px;
+    background: #fdf9f6;
+    text-align: center;
+}
+
+.instagram-feed h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.instagram-feed .cta {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.insta-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.3s ease;
+}
+
+.insta-grid img:hover {
+    filter: brightness(0.8);
+}
+
 /******************************************************************************/
 .error-404 {
     height: calc(100vh - 70.8px);
+}
+
+.error-404 h1 {
+    font-size: 75px;
+    font-weight: 400;
+}
+
+.one {
+    background-color: #fdf9f6;
+}
+
+.two {
+    background-color: #f9eee6;
 }

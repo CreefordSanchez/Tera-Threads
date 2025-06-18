@@ -12,16 +12,32 @@ import { useReducer } from 'react';
 function App() {
   const [cart, dispatch] = useReducer(CartReducer, []);
   return (
-    <>
+    <main>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart cart={cart} dispatch={dispatch}/>} />
         <Route path='/product/:id' element={<Product cart={cart} dispatch={dispatch}/>} />
         <Route path='/axios' element={<Test />} />
+        <Route 
+          exact 
+          path="/" 
+          element={
+            <Home reviews={reviews} addReview={addReview} />
+          } 
+        />
+        <Route 
+          exact 
+          path="Tera-Threads/" 
+          element={
+            <Home reviews={reviews} addReview={addReview} />
+          } 
+        />
+        <Route exact path='cart' element={<Cart />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
-    </>
+      <Footer />
+    </main>
   );
 }
 

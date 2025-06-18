@@ -16,7 +16,7 @@ function ProductBox(props) {
     return (
         <>
             {props.clickable
-                ? <Link to={`/product/${props.id}`} className="link-wrapper">{content}</Link>
+                ? <Link to={`/product/${props.id}`} className="link-wrapper flex-center">{content}</Link>
                 : content
             }
         </>
