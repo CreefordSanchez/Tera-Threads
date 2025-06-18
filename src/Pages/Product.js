@@ -45,22 +45,6 @@ function Product({dispatch}) {
   }
 
   return (
-    <div className="product-detail-page container">
-      <h1>{product.title}</h1>
-      <div className="product-main-detail" >
-          <div className="product-image-box">
-            <img src={product.image} alt={product.title} />
-          </div>
-          <div className="product-info-box">
-          <h3>Price: ${product.price}</h3>
-          <p><strong>Description:</strong> {product.description}</p>
-          <p><strong>Category:</strong> {product.category}</p>
-          <p><strong>Rating:</strong> {product.rating?.rate} <FaStar className="star-icon" /> ({product.rating?.count} reviews)</p>
-          <button onClick={handleAddToCart}>Add to Cart</button>
-          </div>
-      </div>
-      
-
       <div className="product-detail-page section-break">
         <h1>{product.title}</h1>
 
@@ -89,9 +73,7 @@ function Product({dispatch}) {
               <span>({product.rating?.count} reviews)</span>
             </div>
 
-            <Link to="/cart">
-              <button>Add to Cart</button>
-            </Link>
+            <button onClick={handleAddToCart}>Add to Cart</button>
           </div>
         </div>
 
@@ -115,7 +97,6 @@ function Product({dispatch}) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
