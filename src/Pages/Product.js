@@ -41,8 +41,10 @@ function Product() {
         <div className="product-detail-page container">
             <h1>{product.title}</h1>
             <div className="product-main-detail" >
-                <img src={product.image} alt={product.title} />
-                <div>
+                <div className="product-image-box">
+                    <img src={product.image} alt={product.title} />
+                </div>
+                <div className="product-info-box">
                 <h3>Price: ${product.price}</h3>
                 <p><strong>Description:</strong> {product.description}</p>
                 <p><strong>Category:</strong> {product.category}</p>
