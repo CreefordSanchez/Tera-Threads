@@ -1,5 +1,6 @@
 import FilterShop from "../Compoment/FilterShop";
 import Herobanner from "../Compoment/Herobanner";
+import Instapost from "../Compoment/Instapost";
 import Newsletter from "../Compoment/Newsletter";
 import Reviewform from "../Compoment/Reviewform";
 import Reviewslider from "../Compoment/Reviewslider";
@@ -12,7 +13,8 @@ function Home({ reviews, addReview }) {
       <FilterShop />
       <Whychooseus />
       <Reviewslider reviews={reviews} />
-      <Reviewform onSubmit={addReview} />     
+      <Reviewform onSubmit={addReview} /> 
+      <Instapost/>    
       <Newsletter />
     </div>
   );
