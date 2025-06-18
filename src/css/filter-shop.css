@@ -19,6 +19,7 @@
     cursor: pointer;
     position: relative;
     border: 1px solid var(--app-gray);
+    border-radius: 5px;
 }
 
 .filter-dropdown select {
@@ -41,6 +42,7 @@
     max-height: 750px;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-bottom: 10px;
 }
 
 .product-h2 {

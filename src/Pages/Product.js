@@ -5,11 +5,16 @@ import { FaStar } from 'react-icons/fa';
 import { GetProductById, GetProductsByCategory } from '../Service/FakeStoreService';
 import { Link, useNavigate } from "react-router-dom";
 
-function Product() {
+function Product({dispatch}) {
+  const [suggestions, setSuggestions] = useState([]);
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+      dispatch({ type: "ADD_ITEM", payload: product });
+      navigate("/cart");
+  };
 
   // Fetch the main product
   useEffect(() => {
@@ -40,59 +45,58 @@ function Product() {
   }
 
   return (
-    <div className="product-detail-page section-break">
-      <h1>{product.title}</h1>
--      <div className="product-main-detail">
-        <div className="product-image-box">
-          <img src={product.image} alt={product.title} />
-        </div>
+      <div className="product-detail-page section-break">
+        <h1>{product.title}</h1>
 
-        <div className="product-info-box">
-          <h3>Price: ${product.price}</h3>
-
-          <div>
-            <p><strong>Description:</strong></p>
-            <ul>
-              {product.description.split('. ').map((sentence, index) => (
-                <li key={index}>{sentence.trim()}</li>
-              ))}
-            </ul>
+        <div className="product-main-detail">
+          <div className="product-image-box">
+            <img src={product.image} alt={product.title} />
           </div>
 
-          <p><strong>Category:</strong> {product.category}</p>
+          <div className="product-info-box">
+            <h3>Price: ${product.price}</h3>
 
-          <div className="rating">
-            <strong>Rating:</strong> {product.rating?.rate}
-            <FaStar className="star-icon" />
-            <span>({product.rating?.count} reviews)</span>
+            <div>
+              <p><strong>Description:</strong></p>
+              <ul>
+                {product.description.split('. ').map((sentence, index) => (
+                  <li key={index}>{sentence.trim()}</li>
+                ))}
+              </ul>
+            </div>
+
+            <p><strong>Category:</strong> {product.category}</p>
+
+            <div className="rating">
+              <strong>Rating:</strong> {product.rating?.rate}
+              <FaStar className="star-icon" />
+              <span>({product.rating?.count} reviews)</span>
+            </div>
+
+            <button onClick={handleAddToCart}>Add to Cart</button>
           </div>
+        </div>
 
-          <Link to="/cart">
-            <button>Add to Cart</button>
-          </Link>
+        <div className="suggested-products">
+          <h2>You Might Also Like</h2>
+          <div className="suggested-products-grid">
+            {suggestions.length > 0 ? (
+              suggestions.map((item) => (
+                <ProductBox
+                  key={item.id}
+                  id={item.id}
+                  image={item.image}
+                  title={item.title}
+                  price={`$${item.price}`}
+                  clickable={true}
+                />
+              ))
+            ) : (
+              <p>No similar products found.</p>
+            )}
+          </div>
         </div>
       </div>
-
-      <div className="suggested-products">
-        <h2>You Might Also Like</h2>
-        <div className="suggested-products-grid">
-          {suggestions.length > 0 ? (
-            suggestions.map((item) => (
-              <ProductBox
-                key={item.id}
-                id={item.id}
-                image={item.image}
-                title={item.title}
-                price={`$${item.price}`}
-                clickable={true}
-              />
-            ))
-          ) : (
-            <p>No similar products found.</p>
-          )}
-        </div>
-      </div>
-    </div>
   );
 }
 

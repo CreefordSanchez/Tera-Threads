@@ -1,14 +1,15 @@
+import Home from "../src/Pages/Home";
+import Product from "../src/Pages/Product";
 import './css/index.css';
-import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from '../src/Pages/Home';
-import Product from '../src/Pages/Product';
-import Cart from '../src/Pages/Cart';
-import Header from './Compoment/Header';
-import Error404 from './Pages/Error404';
-import Footer from "./Compoment/Footer";
-
+import {Route, Routes} from 'react-router-dom';
+import Header from "./Compoment/Header";
+import Error404 from "./Pages/Error404";
+import Cart from "./Pages/Cart";
+import CartReducer from './Compoment/CartReducer';
+import { useReducer, useState } from 'react';
+import Footer from './Compoment/Footer';
 function App() {
+  const [cart, dispatch] = useReducer(CartReducer, []);
   const [reviews, setReviews] = useState([
     { name: 'Lena', text: 'Absolutely love the dress I got!', rating: 5 },
     { name: 'Jade', text: 'Fast shipping and great quality.', rating: 4 },
@@ -21,15 +22,16 @@ function App() {
     { name: 'Ethan', text: 'Stylish and affordable. Will order again.', rating: 4 },
     { name: 'Aria', text: 'Softest fabric ever! Love everything about it.', rating: 5 },
   ]);
-
+ 
   const addReview = (review) => {
     setReviews([review, ...reviews]);
   };
-
   return (
     <main>
       <Header />
       <Routes>
+        <Route path='/cart' element={<Cart cart={cart} dispatch={dispatch}/>} />
+        <Route path='/product/:id' element={<Product cart={cart} dispatch={dispatch}/>} />
         <Route 
           exact 
           path="/" 
@@ -44,8 +46,14 @@ function App() {
             <Home reviews={reviews} addReview={addReview} />
           } 
         />
-        <Route exact path='cart' element={<Cart />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route 
+          exact 
+          path="Tera-Threads" 
+          element={
+            <Home reviews={reviews} addReview={addReview} />
+          } 
+        />
+        {/* <Route exact path='cart' element={<Cart />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
