@@ -248,6 +248,7 @@ a {
   margin: 12px 0;
   border-radius: 6px;
   border: 1px solid #ccc;
+  resize: none;
 }
 
 .review-form button {
@@ -257,6 +258,7 @@ a {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 /**********************   News Letter Section   *******************************/
