@@ -40,39 +40,93 @@ function Product() {
     }
 
     return (
-        <div className="product-detail-page container section-break">
-            <h1>{product.title}</h1>
-            <div className="product-main-detail" >
-                <div className="product-image-box">
-                    <img src={product.image} alt={product.title} />
-                </div>
-                <div className="product-info-box">
-                <h3>Price: ${product.price}</h3>
-                <p><strong>Description:</strong> {product.description}</p>
-                <p><strong>Category:</strong> {product.category}</p>
-                <p><strong>Rating:</strong> {product.rating?.rate} <FaStar className="star-icon" /> ({product.rating?.count} reviews)</p>
-                <Link to='./cart'><button>Add to Cart</button></Link>
-                </div>
-            </div>
+        // <div className="product-detail-page container section-break">
+        //     <h1>{product.title}</h1>
+        //     <div className="product-main-detail" >
+        //         <div className="product-image-box">
+        //             <img src={product.image} alt={product.title} />
+        //         </div>
+        //         <div className="product-info-box">
+        //         <h3>Price: ${product.price}</h3>
+        //         <p><strong>Description:</strong> {product.description}</p>
+        //         <p><strong>Category:</strong> {product.category}</p>
+        //         <p><strong>Rating:</strong> {product.rating?.rate} <FaStar className="star-icon" /> ({product.rating?.count} reviews)</p>
+        //         <Link to='./cart'><button>Add to Cart</button></Link>
+        //         </div>
+        //     </div>
 
-            <h2>Similar Products</h2>
-            <div className="suggested-products">
-                {suggestions.length > 0 ? (
-                    suggestions.map(item => (
-                        <ProductBox
-                        key={item.id}
-                        id={item.id}
-                        image={item.image}
-                        title={item.title}
-                        price={`$${item.price}`}
-                        clickable={true}
-                        />
-                    ))
-                    ) : (
-                    <p>No similar products found.</p>
-                )}
-            </div>
+        //     <h2>Similar Products</h2>
+        //     <div className="suggested-products">
+        //         {suggestions.length > 0 ? (
+        //             suggestions.map(item => (
+        //                 <ProductBox
+        //                 key={item.id}
+        //                 id={item.id}
+        //                 image={item.image}
+        //                 title={item.title}
+        //                 price={`$${item.price}`}
+        //                 clickable={true}
+        //                 />
+        //             ))
+        //             ) : (
+        //             <p>No similar products found.</p>
+        //         )}
+        //     </div>
+        // </div>
+    <div className="product-detail-page section-break">
+      <h1>{product.title}</h1>
+
+      <div className="product-main-detail">
+        <div className="product-image-box">
+          <img src={product.image} alt={product.title} />
         </div>
+
+        <div className="product-info-box">
+          <h3>Price: ${product.price}</h3>
+
+          <div>
+            <p><strong>Description:</strong></p>
+            <ul>
+              {product.description.split('. ').map((sentence, index) => (
+                <li key={index}>{sentence.trim()}</li>
+              ))}
+            </ul>
+          </div>
+
+          <p><strong>Category:</strong> {product.category}</p>
+
+          <div className="rating">
+            <strong>Rating:</strong> {product.rating?.rate}
+            <FaStar className="star-icon" />
+            <span>({product.rating?.count} reviews)</span>
+          </div>
+
+          <Link to="/cart">
+            <button>Add to Cart</button>
+          </Link>
+        </div>
+      </div>
+
+      <div className="suggested-products">
+        <h2>You Might Also Like</h2>
+        <div className="suggested-products-grid">
+          {suggestions.length > 0 ? (
+            suggestions.map((item) => (
+              <ProductBox
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                title={item.title}
+                price={`$${item.price}`}
+                clickable={true}
+              />
+            ))
+          ) : (
+            <p>No similar products found.</p>
+          )}
+        </div>
+      </div>
+    </div>
     );
 }
 
