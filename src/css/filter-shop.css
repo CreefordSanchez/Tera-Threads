@@ -18,6 +18,7 @@
 .filter-dropdown {
     cursor: pointer;
     position: relative;
+    border: 1px solid var(--app-gray);
 }
 
 .filter-dropdown select {
@@ -25,18 +26,11 @@
   appearance: none; 
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 110px;
   cursor: pointer;
   background-color: var(--app-no-color);
   height: 36px;
-  width: 146px;
+  width: 170px;
   text-align: center;
-}
-
-.filter-dropdown i {
-    position: absolute;
-    right: 0;
-    z-index: -1;
 }
 
 .product-list {

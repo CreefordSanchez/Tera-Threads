@@ -43,7 +43,6 @@ function FilterShop() {
                                 <option value={"jewelery"}>Jewery's</option>
                                 <option value={"electronics"}>Electronic's</option>
                             </select>
-                            <i className="fa-solid fa-angle-down"></i>
                         </div>                        
                     </div>
                 </form>                
