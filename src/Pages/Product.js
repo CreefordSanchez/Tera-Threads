@@ -3,12 +3,18 @@ import { useParams } from "react-router-dom";
 import ProductBox from "../Compoment/ProductBox";
 import { FaStar } from 'react-icons/fa';
 import { GetProductById, GetProductsByCategory } from '../Service/FakeStoreService';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Product() {
+function Product({dispatch}) {
+    const [suggestions, setSuggestions] = useState([]);
     const { id } = useParams();
     const [product, setProduct] = useState(null);
-    const [suggestions, setSuggestions] = useState([]);
+    const navigate = useNavigate();
+
+    const handleAddToCart = () => {
+        dispatch({ type: "ADD_ITEM", payload: product });
+        navigate("/cart");
+    };
 
     // Fetch the main product
     useEffect(() => {
@@ -47,7 +53,7 @@ function Product() {
                 <p><strong>Description:</strong> {product.description}</p>
                 <p><strong>Category:</strong> {product.category}</p>
                 <p><strong>Rating:</strong> {product.rating?.rate} <FaStar className="star-icon" /> ({product.rating?.count} reviews)</p>
-                <Link to='./cart'><button>Add to Cart</button></Link>
+                <button onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
 

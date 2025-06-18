@@ -2,6 +2,7 @@
 @import url('./filter-shop.css');
 @import url('./productBox.css');
 @import url('./header.css');
+@import url('./cart.css');
 
 * {
     margin: 0;
