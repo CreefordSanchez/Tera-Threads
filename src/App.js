@@ -30,7 +30,6 @@ function App() {
     <main>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart cart={cart} dispatch={dispatch}/>} />
         <Route path='/product/:id' element={<Product cart={cart} dispatch={dispatch}/>} />
         <Route 
@@ -43,6 +42,13 @@ function App() {
         <Route 
           exact 
           path="Tera-Threads/" 
+          element={
+            <Home reviews={reviews} addReview={addReview} />
+          } 
+        />
+        <Route 
+          exact 
+          path="Tera-Threads" 
           element={
             <Home reviews={reviews} addReview={addReview} />
           } 
