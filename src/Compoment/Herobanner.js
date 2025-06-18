@@ -1,7 +1,7 @@
 function Herobanner() {
     return(
-        <section class="hero ">
-            <div class="hero-content">
+        <section className="hero ">
+            <div className="hero-content">
                 <h2>Define Your Look. Own Your Moment.</h2>
                 <p>
                     Discover bold, timeless fashion that speaks for you. 

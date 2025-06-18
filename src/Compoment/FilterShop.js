@@ -29,9 +29,10 @@ function FilterShop() {
     }, [category, productName]);
 
     return (
-        <section>
+        <section className="one products-section">
             <div className="sort-product-header border-bottom-gray">
                 <form className="container">
+                    <h2 className="product-h2">Check out our best sellers!</h2>
                     <div className="flex-center flex-space-between">
                         <input onChange={(event) => setProductName(event.target.value)} placeholder="Product Name"></input>
                         <div className="filter-dropdown flex-align-center">

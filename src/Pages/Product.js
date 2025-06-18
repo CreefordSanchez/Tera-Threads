@@ -3,18 +3,20 @@ import { useParams } from "react-router-dom";
 import ProductBox from "../Compoment/ProductBox";
 import { FaStar } from 'react-icons/fa';
 import { GetProductById, GetProductsByCategory } from '../Service/FakeStoreService';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Product() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [suggestions, setSuggestions] = useState([]);
+    const navigate = useNavigate();
 
     // Fetch the main product
     useEffect(() => {
         const fetchProduct = async () => {
             const data = await GetProductById(id);
-            if (data) setProduct(data);
+            if (data != '') setProduct(data);
+            else navigate('*');
         };
         fetchProduct();
     }, [id]);
@@ -38,7 +40,7 @@ function Product() {
     }
 
     return (
-        <div className="product-detail-page container">
+        <div className="product-detail-page container section-break">
             <h1>{product.title}</h1>
             <div className="product-main-detail" >
                 <div className="product-image-box">
