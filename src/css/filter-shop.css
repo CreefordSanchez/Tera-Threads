@@ -19,6 +19,7 @@
     cursor: pointer;
     position: relative;
     border: 1px solid var(--app-gray);
+    border-radius: 5px;
 }
 
 .filter-dropdown select {
