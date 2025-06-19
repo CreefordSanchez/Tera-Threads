@@ -2,11 +2,11 @@ import { useState } from 'react';
 import CartItem from '../Compoment/CartItem';
 import { motion } from "motion/react"
 
-function Cart({ cart, dispatch }) {
+function Cart(props) {
   const [showDialog, setShowDialog] = useState(false);
 
   let total = 0;
-  cart.forEach(item => {
+  props.cart.forEach(item => {
     total += item.price * item.quantity;
   });
 
@@ -17,8 +17,8 @@ function Cart({ cart, dispatch }) {
     transition={{duration:0.5, ease:'easeOut'}}>
       <h1>Shopping Cart</h1>
       <div className="list-container">
-        {cart.map(item => (
-          <CartItem key={item.id} item={item} dispatch={dispatch} />
+        {props.cart.map(item => (
+          <CartItem key={item.id} item={item} dispatch={props.dispatch} />
         ))}
       </div>
       <div className="cart-summary">
