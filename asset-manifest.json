@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.css": "/Tera-Threads/static/css/main.0177ba28.css",
-    "main.js": "/Tera-Threads/static/js/main.4ac1321f.js",
+    "main.css": "/Tera-Threads/static/css/main.15992ec5.css",
+    "main.js": "/Tera-Threads/static/js/main.932dc788.js",
+    "static/media/insta3.jpg": "/Tera-Threads/static/media/insta3.ee08b8c4a1295c9c0d90.jpg",
+    "static/media/insta2.jpg": "/Tera-Threads/static/media/insta2.ceff3285d8450b2c24dc.jpg",
+    "static/media/insta4.jpg": "/Tera-Threads/static/media/insta4.66b635ec9123aa2822e6.jpg",
+    "static/media/insta5.jpg": "/Tera-Threads/static/media/insta5.21c97c85008b8b05a34c.jpg",
+    "static/media/insta6.jpg": "/Tera-Threads/static/media/insta6.db171a51079353836330.jpg",
+    "static/media/insta1.jpg": "/Tera-Threads/static/media/insta1.d5a5349055425cd258c0.jpg",
     "static/media/bannerimg.jpg": "/Tera-Threads/static/media/bannerimg.95a03ab64b0dafb9abd0.jpg",
     "index.html": "/Tera-Threads/index.html",
-    "main.0177ba28.css.map": "/Tera-Threads/static/css/main.0177ba28.css.map",
-    "main.4ac1321f.js.map": "/Tera-Threads/static/js/main.4ac1321f.js.map"
+    "main.15992ec5.css.map": "/Tera-Threads/static/css/main.15992ec5.css.map",
+    "main.932dc788.js.map": "/Tera-Threads/static/js/main.932dc788.js.map"
   },
   "entrypoints": [
-    "static/css/main.0177ba28.css",
-    "static/js/main.4ac1321f.js"
+    "static/css/main.15992ec5.css",
+    "static/js/main.932dc788.js"
   ]
 }
