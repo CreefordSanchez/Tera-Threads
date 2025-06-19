@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { GetProductsByCategory } from '../Service/FakeStoreService.js';
 import ProductBox from "./ProductBox.js";
+import FilterShopHeader from "./FilterShopHeader.js";
 
 function FilterShop() {
     const [products, setProducts] = useState([]);
@@ -31,21 +32,7 @@ function FilterShop() {
     return (
         <section className="one products-section">
             <div className="sort-product-header border-bottom-gray">
-                <form className="container">
-                    <h2 className="product-h2">Check out our best sellers!</h2>
-                    <div className="flex-center flex-space-between">
-                        <input onChange={(event) => setProductName(event.target.value)} placeholder="Product Name"></input>
-                        <div className="filter-dropdown flex-align-center">
-                            <select onChange={(event) => setCategory(event.target.value)}>
-                                <option>Select a Category</option>
-                                <option value={"women's clothing"}>Woman's Clothing</option>
-                                <option value={"men's clothing"}>Man's Clothing</option>
-                                <option value={"jewelery"}>Jewery's</option>
-                                <option value={"electronics"}>Electronic's</option>
-                            </select>
-                        </div>                        
-                    </div>
-                </form>                
+                <FilterShopHeader setProductName={setProductName} setCategory={setCategory}/>          
             </div>
            
             <div className="product-list container">
