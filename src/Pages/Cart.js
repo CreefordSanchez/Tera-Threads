@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CartItem from '../Compoment/CartItem';
+import { motion } from "motion/react"
 
 function Cart({ cart, dispatch }) {
   const [showDialog, setShowDialog] = useState(false);
@@ -10,7 +11,10 @@ function Cart({ cart, dispatch }) {
   });
 
   return (
-    <div className="cart-container">
+    <motion.div className="cart-container"
+    initial={{opacity: 0, y: -30}}
+    animate={{opacity: 1, y: 0}}
+    transition={{duration:0.5, ease:'easeOut'}}>
       <h1>Shopping Cart</h1>
       <div className="list-container">
         {cart.map(item => (
@@ -32,7 +36,7 @@ function Cart({ cart, dispatch }) {
           <button onClick={() => setShowDialog(false)}>Close</button>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
