@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { GetProductsByCategory } from '../Service/FakeStoreService.js';
 import ProductBox from "./ProductBox.js";
 import FilterShopHeader from "./FilterShopHeader.js";
+import ProductList from "./ProductList.js";
 
 function FilterShop() {
     const [products, setProducts] = useState([]);
@@ -35,20 +36,7 @@ function FilterShop() {
                 <FilterShopHeader setProductName={setProductName} setCategory={setCategory}/>          
             </div>
            
-            <div className="product-list container">
-                {products.length > 0 ? 
-                    products.map((item, key) => 
-                        <ProductBox
-                            key={item.id}
-                            id={item.id}
-                            image={item.image}
-                            title={item.title}
-                            price={`$${item.price}`}
-                            clickable={true}
-                        />
-                    ) : <h2>No product found</h2>
-                }
-            </div>
+            <ProductList products={products}/>
         </section>
     )
 }
