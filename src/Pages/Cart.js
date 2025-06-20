@@ -11,7 +11,7 @@ function Cart(props) {
   });
 
   return (
-    <motion.div className="cart-container"
+    <motion.div className="cart-container container"
     initial={{opacity: 0, y: -30}}
     animate={{opacity: 1, y: 0}}
     transition={{duration:0.5, ease:'easeOut'}}>

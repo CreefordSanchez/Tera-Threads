@@ -11,14 +11,14 @@
     padding: 10px 0 10px 10px;
     width: 200px;
     margin-left: 5px;
-    border: 1px solid var(--app-gray);
+    border: 2px solid var(--app-gray);
     border-radius: 5px;
 }
 
 .filter-dropdown {
     cursor: pointer;
     position: relative;
-    border: 1px solid var(--app-gray);
+    border: 2px solid var(--app-gray);
     border-radius: 5px;
 }
 
