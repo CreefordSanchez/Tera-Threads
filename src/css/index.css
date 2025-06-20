@@ -68,7 +68,7 @@ a {
 }
   
 .hero p {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 2;
     margin-bottom: 35px;
     text-align: center;
@@ -77,36 +77,40 @@ a {
 }
   
 .first-hero-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--app-brown); 
-    color: #000;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: background 0.3s ease;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--app-brown); 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .first-hero-button:hover {
     background-color: #bb946c;
-    transform: scale(1.05);
+    transform: scale(1);
+    border: none;
 }
 
 .second-hero-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #b1b1fc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: background 0.3s ease;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: var(--app-brown);
+  border: 2px solid var(--app-brown); 
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .second-hero-button:hover {
-    background-color: #34344A; 
-    color: #fff;
-    transform: scale(1.05);
+  background-color: var(--app-brown);
+  color: #fff;
+  transform: scale(1);
+  border-color: var(--app-brown);
 }
 
 .banner-btn {
